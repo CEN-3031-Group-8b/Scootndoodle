@@ -3,7 +3,7 @@ This project contains an example project board meant to showcase how one can be 
 
 #### _**IMPORTANT NOTE**_ - 
 This project does not have a mongoDB connection setup. For:
-- local development: create a config file (make sure to name it config.js) in the config folder, which exports your db.uri connection. An example is provided, config/config.example.js. This file will be ignored by git so your db credentials will be kept safe when the app is deployed.
+- local development: create a config file (make sure to name it config.js) in the config folder, which exports your db.uri connection. An example is provided, config/config.js. This file will be ignored by git so your db credentials will be kept safe when the app is deployed.
 - production: Since the config file is not pushed when you deploy your app, you must specifiy your db uri in heorku. Set the uri in heroku as specified in [this](https://devcenter.heroku.com/articles/config-vars) resource. Make sure you name the environement variable "DB_URI".
 
 ## Getting Started

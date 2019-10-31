@@ -5,14 +5,15 @@ import './Header.css';
 const Header = () => {
     return (
         <div className='topnav'>
+
             {/* Logo */}
             <Link id="logo-link" to="/">
-                <img className="topnav-logo" src={ "/logo192.png" } alt="React logo" />
+                <img className="topnav-logo" src="https://i2.wp.com/pamwithers.com/wp-content/uploads/2017/01/writingtools-300x218.jpg?resize=300%2C218" alt="React logo" />
             </Link>
 
             {/* Page Links */}
             <div className="topnav-right">
-                <Link className="topnav-link" to='/Register'>Sign in</Link>
+                <Link className="topnav-link" to='/Pay'>Pay </Link>
                 <Link className="topnav-link" to='/projects'>Projects</Link>
                 <a className="topnav-link" target='_blank' rel="noopener noreferrer" href="https://www.facebook.com/groups/ufosc/events/?source=4&action_history=null&filter=calendar">
                     Events

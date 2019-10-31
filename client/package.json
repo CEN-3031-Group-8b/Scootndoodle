@@ -29,6 +29,7 @@
     ]
   },
   "devDependencies": {
+    "paypal-rest-sdk": "^1.8.1",
     "react-router-dom": "^5.1.2"
   },
   "proxy": "http://localhost:5000"
