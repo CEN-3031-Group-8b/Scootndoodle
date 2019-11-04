@@ -41,7 +41,7 @@ function Pay() {
     return (
         <div className="Pay">
             <header className="Checkout">
-
+                <h1>This should be where the redirection to the paypal website happens</h1>
             </header>
         </div>
     );

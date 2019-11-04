@@ -14,16 +14,16 @@ const Header = () => {
             {/* Page Links */}
             <div className="topnav-right">
                 <Link className="topnav-link" to='/Pay'>Pay </Link>
-                <Link className="topnav-link" to='/projects'>Projects</Link>
+                <Link className="topnav-link" to='/projects'> Projects </Link>
                 <a className="topnav-link" target='_blank' rel="noopener noreferrer" href="https://www.facebook.com/groups/ufosc/events/?source=4&action_history=null&filter=calendar">
-                    Events
+                     Events
                     <i className="fas fa-external-link-alt external-link" data-fa-transform="up-6"></i>
                 </a>
                 <a className="topnav-link" target='_blank' rel="noopener noreferrer" href="https://github.com/ufosc/club-resources">
-                    Resources
+                     Resources
                     <i className="fas fa-external-link-alt external-link" data-fa-transform="up-6 right-4"></i>
                 </a>
-                <Link className="topnav-link" to="/about">About</Link>
+                <Link className="topnav-link" to="/about"> About </Link>
             </div>
         </div>
     )
