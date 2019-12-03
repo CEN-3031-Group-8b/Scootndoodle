@@ -1,34 +1,34 @@
 import React from 'react';
-import { Route, Switch, Redirect  } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect  } from 'react-router-dom';
 import { Home } from "./views/Home/Home"
-import { Shop } from './views/Shop/Shop'
 import Media   from "./components/Media/Media"
 import NotFound from "./views/NotFound"
-import Footer from './components/Footer/Footer';
-import Container from 'react-bootstrap/Container'
-import Navigation from "./components/Navigation/Navigation"
-import Section from "./components/Navigation/Section"
+import Success from './views/Shop/Congrats'
+import ShopPreview from './components/ShopPreview/ShopPreview'
+import Cart from "./components/Cart/Cart";
 
 import './App.css'
 
 
+
 const App = () => {
   return (
-      <Switch>
-        <Route exact path="/Home" component={Home} />
-        <Route exact path="/">
-          <Redirect to="/Home" />
-        </Route>
-        <Route exact path='/Shop' component={Shop} />
-        <Section
-          title="Media"
-          subtitle=''
-          dark={true}
-          id="Media"
-        />
-        <Route component={NotFound}/>
-      </Switch>
+      <Router>
+        <div className={'App'}>
+          <Switch>
+            <Route exact path="/Home" component={Home} />
+            <Route exact path="/">
+              <Redirect to="/Home" />
+            </Route>
+            <Route exact path='/ShopPreview' component={ShopPreview} />
+            <Route exact path='/Cart' component={Cart} />
+            <Route exact path='/Success' component={Success}/>
+            <Route exact path="/Media" component={Media} />
+            <Route component={NotFound}/>
+          </Switch>
+        </div>
+      </Router>
   );
-}
+};
 
 export default App;

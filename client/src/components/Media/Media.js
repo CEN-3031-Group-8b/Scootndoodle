@@ -1,14 +1,17 @@
 import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { SocialIcon } from 'react-social-icons'
+//import $ from 'jquery'
+//import { library } from '@fortawesome/fontawesome-svg-core'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
+// import  SocialIcon  from 'react-social-icons'
+import './index.css'
 import InstaGrid from './InstaGrid'
 import { FacebookWidget } from './FacebookWidget'
 import { ContactForm } from '../ContactForm/ContactForm'
 
-import './index.css'
-import './Media.css'
-//library.add(faFacebookSquare); 
+//library.add(faFacebookSquare);
 
 class Media extends React.Component {
     render() {

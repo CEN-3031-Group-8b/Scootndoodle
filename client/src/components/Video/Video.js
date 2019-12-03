@@ -11,7 +11,7 @@ export const Video = () => (
         <video id='background-video' loop autoPlay muted>
             <source src={Demo} type="video/mp4" />
             <source src={Demo} type="video/ogg" />
-            Your browswer does not support this video.
+            Your browser does not support this video.
         </video>
 
         <div className='video-text'>
@@ -27,8 +27,8 @@ export const Video = () => (
                     </p>
                 </Row>
             </Col>
-            
-            
+
+
         </div>
     </div>
 )

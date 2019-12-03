@@ -1,0 +1,62 @@
+.button {
+    text-align: -webkit-center;
+    padding-top: 300px;
+}
+
+.view{
+    display: flex;
+    justify-content: center;
+    padding: 30vh 30vh 10vh;
+    background: #a6d5ec;
+}
+
+.pay{
+    position: fixed;
+    bottom: 1%;
+    right: 45%;
+    display: flex;
+}
+
+
+.homeButton {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: grey;
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 10px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2.5px;
+}
+
+.homeButton span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.homeButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.homeButton:hover span {
+    padding-right: 15px;
+}
+
+.homeButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
