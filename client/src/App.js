@@ -31,7 +31,7 @@ const App = () => {
         <Route exact path="/">
           <Redirect to="/Home" />
         </Route>
-        <Route exact path='/Shop' component={Shop} />
+        <Route exact path='/create-product' component={mainCart} />
         <Route exact path='/AdminPortal' component={Orders} />
         <Route exact path='/Payment' component={CartView} />
         <Route exact path='/HippoController' component={HippoController} />

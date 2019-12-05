@@ -32,7 +32,7 @@ export default class EditCart extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/products/edit-product/' + this.props.match.params.id)
+    axios.get('http://localhost:5000/products/edit-product/' + this.props.match.params.id)
       .then(res => {
         this.setState({
           item:res.data.item,
@@ -72,7 +72,7 @@ export default class EditCart extends Component {
     };
 
 
-    axios.put('http://localhost:4000/products/update-product/' + this.props.match.params.id, trackerObject)
+    axios.put('http://localhost:5000/products/update-product/' + this.props.match.params.id, trackerObject)
       .then((res) => {
         console.log(res.data)
         console.log('product successfully updated')

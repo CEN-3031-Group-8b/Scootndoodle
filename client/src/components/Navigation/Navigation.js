@@ -22,7 +22,7 @@ export default class Navigation extends React.Component {
                             offset={-15}
                             duration= {500}
                         >About Us</Link>
-                        <NavLink className='d-inline p-2 text-black' to='/shop' style={{ textDecoration: 'none' }}>Buy</NavLink>
+                        <NavLink className='d-inline p-2 text-black' to='/create-product' style={{ textDecoration: 'none' }}>Buy</NavLink>
                         <Link 
                             className='d-inline p-2 text-black'
                             activeClass="active"
