@@ -44,7 +44,7 @@ export default class mainCart extends Component {
 						
 						<br></br>
                         <Link to="/HippoController">
-  <button className="add-to-cart btn btn-default" type="button">View More</button>
+						<button button type="button" class="btn btn-primary">View More</button>
   </Link>
                            
 
@@ -71,7 +71,7 @@ export default class mainCart extends Component {
                        
 <br></br>
 						<Link to="/CarController">
-  <button className="add-to-cart btn btn-default" type="button">View More</button>
+  <button button type="button" class="btn btn-primary">View More</button>
   </Link>
 					</div>
 				</div>

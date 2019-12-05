@@ -5,6 +5,8 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card'
 import './ProductTableRow.css'
 import productPhotos from '../DSC_0056.JPG'
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -78,12 +80,20 @@ export default class HippoController extends Component {
 
   render() {
     return (
-    <div className="form-wrapper">
+ <div className="form-wrapper">
+    <nav className='navBar'>
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><a href={"/Home"}>Home</a></li>
+                            <li className="breadcrumb-item active"><a href="#">Shop</a></li>
+                        </ol>
+                    </nav>
+      <Link to='/create-product'> Return to Shop</Link>
       <Card>
        <Form onSubmit={this.onSubmit}>
 
       
 <div className="wrapper row">
+
   <div className="col-md-6">
       <img src={productPhotos} />
   </div>
