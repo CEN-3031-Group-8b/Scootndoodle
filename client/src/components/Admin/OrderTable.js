@@ -13,6 +13,8 @@ export default function OrderTable() {
       { title: 'Items Ordered', field: 'itemsOrdered' },
       { title: 'Order Status', field: 'status' },
     ],
+    //uses sample data is a json format because we have no genuine data to work with
+    //once genuine data is gathered, simply connect it to mongo
     data: [
       {
         id: 1,
@@ -61,13 +63,14 @@ export default function OrderTable() {
   });
 
   return (
-   
+   //return the table itself using the materialTable library
     <MaterialTable 
 
     title="Orders"
     columns={state.columns}
     data={state.data}
     editable={{
+    //onRowAdd updates state whenever a row is added so the new table corrrectly displays new data
       onRowAdd: newData =>
         new Promise(resolve => {
           setTimeout(() => {
@@ -79,6 +82,8 @@ export default function OrderTable() {
             });
           }, 1000);
         }),
+          
+ //onRowAdd updates state whenever a row is updated so the new table corrrectly displays new data
       onRowUpdate: (newData, oldData) =>
         new Promise(resolve => {
           setTimeout(() => {
@@ -92,6 +97,8 @@ export default function OrderTable() {
             }
           }, 1000);
         }),
+        
+ //onRowAdd updates state whenever a row is deleted so the new table corrrectly displays new data set
       onRowDelete: oldData =>
         new Promise(resolve => {
           setTimeout(() => {
