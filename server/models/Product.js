@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+//schema for products
 let productSchema = new Schema({
   item: {
     type: String,
@@ -22,12 +23,6 @@ let productSchema = new Schema({
     type:String,
     required: true
   },
-
-  
-
-  
-
- 
 
 }, {
     collection: 'products'

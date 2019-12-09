@@ -35,6 +35,7 @@ html, body {
     opacity: 0;
     transition: all .3s ease;
   }
+
   .custom-radios input[type="radio"]#color-1 + label span {
     background-color: #2ecc71;
   }
@@ -53,7 +54,6 @@ html, body {
     width: 40px;
     height: 40px;
     display: inline-block;
-  
   }
   .btn span.glyphicon {    			
 	opacity: 0;				

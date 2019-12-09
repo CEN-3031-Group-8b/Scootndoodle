@@ -17,7 +17,7 @@ export default class HippoController extends Component {
     
     this.onSubmit = this.onSubmit.bind(this);
 
-    // Setting up state
+    // Setting up state for Hippo product
     this.state = {
       item: 'Hippo',
       description: 'This is the description',
@@ -27,6 +27,7 @@ export default class HippoController extends Component {
     }
   }
 
+  //changes product details
   onChangeProductColor(e) {
     this.setState({ color: e.target.value })
   }
@@ -39,34 +40,30 @@ export default class HippoController extends Component {
     this.setState({ size: e.target.value })
   }
 
-  
 
   onSubmit(e) {
     e.preventDefault()
 
-    const trackerObject = {
+    const productObject = {
       item: this.state.item,
       description: this.state.description,
       color: this.state.color,
       quantity: this.state.quantity,
       price: this.state.price,
       size: this.state.size,
-    
-     
     };
 
-
-    axios.post('https://dextedoodle.herokuapp.com/products/create-product',trackerObject)
+    //posts new additions to cart to database
+    axios.post('https://dextedoodle.herokuapp.com/products/create-product',productObject)
       .then(res => console.log(res.data));
 
     this.setState({ 
       item: 'Hippo',
-    description: 'This is the description',
-    color: '',
-    price: '9.95',
-    size: '',
-    quantity:''
-    
+      description: 'This is the description',
+      color: '',
+      price: '9.95',
+      size: '',
+      quantity:'' 
   })
 
      // Redirect to List 
@@ -78,86 +75,85 @@ export default class HippoController extends Component {
     return (
 
 
-    <div className="form-wrapper">
+<div className="form-wrapper">
 
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">Home</a></li>
-  <li class="breadcrumb-item active">Shop</li>
-</ol>
+    {/* Breadcrumbs to link to other pages */}
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active">Shop</li>
+    </ol>
 
-<a href="/create-product" class="previous">&laquo; Back to Shop</a>
-<br/>
+    {/* Links back to the shop */}  
+    <a href="/create-product" class="previous">&laquo; Back to Shop</a>
+    <br/>
 
+     {/* Product is added to database as a form */}
       <Card>
-       <Form onSubmit={this.onSubmit}>
+       <Form onSubmit={this.onSubmit}>   
+        <div className="wrapper row">
+          <div className="col-md-6">
+              <img src={productPhotos} />
+          </div>
 
-      
-<div className="wrapper row">
-  <div className="col-md-6">
-      <img src={productPhotos} />
-  </div>
-  <div className="col-md-6">
-    <h3 className="product-title">{this.state.item}</h3>
-    <p className="product-description">{this.state.description}</p>
-    <p className="product-price">{this.state.price}</p>
-    
-    <br></br>
+          {/*displays item name, description and price*/}
+          <div className="col-md-6">
+            <h3 className="product-title">{this.state.item}</h3>
+            <p className="product-description">{this.state.description}</p>
+            <p className="product-price">{this.state.price}</p>
+            <br></br>
                 
-                  
+            {/*Submits size and color*/}          
+            <Form.Group controlId="Name">
+           
+           {/*Submits color, to add a color copy and paste radio button, but change "value" to a different color as a string*/}
+            <Form.Label>Color</Form.Label>
+
+            {/*Green button*/}
+              <div class="custom-radios">
+              <div>
+              <input type="radio" id="color-1" name="color" value="green" onChange={this.onChangeProductColor}/>
+              <label for="color-1">
+              <span>
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+              </span>
+              </label>
+              </div>
+
+              {/*Blue button*/}
+              <div>
+              <input type="radio" id="color-2" name="color" value="blue" onChange={this.onChangeProductColor}/>
+              <label for="color-2">
+                <span>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                </span>
+              </label>
+              </div>
+              </div>
+            </Form.Group>
 
 
-    <Form.Group controlId="Name">
-    <Form.Label>Color</Form.Label>
-    <div class="custom-radios">
-<div>
-<input type="radio" id="color-1" name="color" value="green" onChange={this.onChangeProductColor}/>
-<label for="color-1">
-<span>
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
-</span>
-</label>
-</div>
+          {/*Submits size, to add/delete a size add/delete option value  <option value="L">Large</option> and change letter and label */}
+          <Form.Group controlId="Name">
+            <Form.Label>Size </Form.Label>
+            <br></br>
+            <select type="text" value={this.state.size} onChange={this.onChangeProductSize} >
+                    <option value="" selected disabled hidden>Please select a size</option>
+                    <option value="S">Small</option>
+                      <option value="M">Medium</option>
+                      <option value="L">Large</option>
+            </select>
+          </Form.Group>
 
-<div>
-<input type="radio" id="color-2" name="color" value="blue" onChange={this.onChangeProductColor}/>
-<label for="color-2">
-<span>
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
-</span>
-</label>
-</div>
-</div>
-  </Form.Group>
-
-
-  <Form.Group controlId="Name">
-    <Form.Label>Size </Form.Label>
-    <br></br>
-    <select type="text" value={this.state.size} onChange={this.onChangeProductSize} >
-            <option value="" selected disabled hidden>Please select a size</option>
-            <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-          </select>
-  </Form.Group>
-
-  <Button className="add-cart" type="submit">
+        {/*Adds item to the cart */}
+        <Button className="add-cart" type="submit">
           Add to Cart
         </Button>
-
+      </div>
   </div>
- </div>
-
-   
   
-        
-      </Form>
-
-      </Card>
-
-
-
-    </div>);
-
+    </Form>
+  </Card>
+</div>
+    );
   }
 }

@@ -4,46 +4,45 @@ import { Link } from 'react-router-dom';
 import './CustomerInfo.css'
 import { CartOverview } from './CartOverview'
 
-
-
-
 export const CustomerInfo = () => (
+
+/*Would be used to save information on customer to save to a database for admin records*/
 <Container className = 'customer-info-container'>
-    
-<nav>
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item"><a href="/create-product">Shop</a></li>
-        <li class="breadcrumb-item"><a href="/product-list">Cart</a></li>
-        <li class="breadcrumb-item active">Place Order</li>
-    </ol>
-</nav>
+    {/*breadcrumbs to different pages*/}
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/create-product">Shop</a></li>
+            <li class="breadcrumb-item"><a href="/product-list">Cart</a></li>
+            <li class="breadcrumb-item active">Place Order</li>
+        </ol>
+    </nav>
+
 
 <div class="container">
   <div class="row">
-  <div class="col-9">
-    
+  <div class="col-9"> 
     <h1>
         Customer Information
     </h1>
     <hr />
 
     <div className="container">
-        <form>
+        {/*Form to take user input on contact information*/}
+        <form>]
             <div class = "form-group">
-       
                 <input type= "email" class = "form-control" id="email" placeholder ="Enter email"></input>
             </div>
 
             <div class = "form-group">
             <div class="form-row">
-    <div class="col">
+            <div class="col">
                 <input type= "first-name" class = "form-control" id="first-name" placeholder ="First Name"></input>
             </div>
 
             <div class = "form-group">
             </div>
-    <div class="col">
+            <div class="col">
                 <input type= "last-name" class = "form-control" id="last-name" placeholder ="First Name"></input>
             </div>
             </div>
@@ -77,32 +76,20 @@ export const CustomerInfo = () => (
                 <input type= "zip" class = "form-control" id="zip" placeholder ="Zip code"></input>
             </div>
         </form>
-
 		</div>
         </div>
 
-
+        {/*Displays cart overview */}
         <div class="col-md-3">
 			<CartOverview/>
 			<div class="text-center">
 			<Link to="/CustomerInfo">
-  <button className="add-to-cart btn btn-default" type="button">Proceed Payment</button>
-  </Link>
-  
-		
-
-</div>
-		
-      
-</div> 
-
-
-        </div>
-
- 
+                <button className="add-to-cart btn btn-default" type="button">Proceed Payment</button>
+            </Link>
+            </div> 
+        </div> 
+    </div>
 </div>  
-
-
 </Container>
 
 )
