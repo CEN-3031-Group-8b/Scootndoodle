@@ -34,7 +34,7 @@ export default class ProductTableRow extends Component {
                 <td width="90px" class="text-left">{this.props.obj.price}</td>
 
                 {/*Button to delete products from cart*/}
-                <td width="90px"  class="text-left"><Button onClick={this.deleteTracker} size="sm" variant="danger">Delete</Button></td>
+                <td width="90px"  class="text-left"><Button onClick={this.deleteProduct} size="sm" variant="danger">Delete</Button></td>
                 </tr>
                 </tbody>
             </table>
