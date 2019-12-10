@@ -77,3 +77,19 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+### Heroku Deployment
+
+This web application is deployed on Heroku and can be accessed here:
+https://dextedoodle.herokuapp.com/Home
+
+
+
+### Update Database
+
+To update the database in Heroku simply change the mongodb string in the Config Vars of the DB_URI. Also change this string in the config.js file.
+
+
+### Key Features Implemented
