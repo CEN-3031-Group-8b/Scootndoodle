@@ -93,10 +93,13 @@ To update the database in Heroku simply change the mongodb string in the Config 
 
 
 ### Key Features Implemented
+Home page with infinite scroll
+Embedded video
+Facebook/Instagram posts displayed
+Shop/Payment through stripe
+Admin Dashboard
 
-
-
-### APIs/Libraries Used
+### Credit/Libraries Used
 Material-ui
 express
 Material-table
