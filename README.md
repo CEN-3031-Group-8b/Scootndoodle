@@ -93,7 +93,7 @@ To update the database in Heroku simply change the mongodb string in the Config 
 
 
 ### Key Features Implemented
-![Home page with infinite scroll](.git/images/Homepage.png)
+![Home page with infinite scroll](images/Homepage.png)
 Embedded video
 Facebook/Instagram posts displayed
 Shop/Payment through stripe
