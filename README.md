@@ -95,7 +95,8 @@ To update the database in Heroku simply change the mongodb string in the Config 
 ### Key Features Implemented
 Home page with infinite scroll
 Embedded video
-Facebook/Instagram posts displayed
+![Facebook/Instagram posts displayed](https://drive.google.com/file/d/1DXTftVLSyl0UF4UxksUjXbNgmGdiPhHy/view?usp=sharing)
+
 Shop/Payment through stripe
 Admin Dashboard
 
