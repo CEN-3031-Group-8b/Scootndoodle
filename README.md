@@ -92,23 +92,25 @@ https://dextedoodle.herokuapp.com/Home
 To update the database in Heroku simply change the mongodb string in the Config Vars of the DB_URI. Also change this string in the config.js file.
 
 
-### Key Features Implemented
-Homepage with Infinite Scroll
+## Key Features Implemented
+### Homepage with Infinite Scroll
 ![Homepage with infinite scroll](images/Homepage.png)
 
-Embedded video
 
-Facebook/Instagram posts displayed
+### Embedded video
+
+### Facebook/Instagram posts displayed
 ![Facebook/Instagram posts displayed](images/SocialMedia.png)
 
-Shop/Payment through Stripe
+
+### Shop/Payment through Stripe
 ![Shop/Payment through Stripe](images/ShopInfo.png)
 
 ![Shop/Payment through Stripe](images/Shop.png)
 
 ![Shop/Payment through Stripe](images/StripePayment.png)
 
-Admin Dashboard
+### Admin Dashboard
 ![Admin Dashboard](images/AdminPortal.png)
 
 
