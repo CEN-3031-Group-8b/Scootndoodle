@@ -49,7 +49,7 @@
     "node-fetch": "^2.6.0",
     "nodemailer": "^6.3.1",
     "nodemon": "^1.18.10",
-    "npm": "^6.13.0",
+    "npm": "^6.14.6",
     "origen-react-instagram-feed": "0.0.3",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-credit-cards": "^0.8.0",
