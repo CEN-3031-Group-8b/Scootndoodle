@@ -1,0 +1,9 @@
+.tableView {
+  background-color: #ffffff;
+    color: rgba(231, 231, 231, 0.911);
+    font-family: Arial;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    align-content: center;
+  }

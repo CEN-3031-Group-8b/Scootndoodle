@@ -5,8 +5,12 @@
     overflow: hidden;
 }
 
-.video-container .video-text {
+.video-text {
     background: rgba(0,0,0,0);
     position: absolute;
-    top: 10%; right: 10%; bottom: 10%; left: 10%;
+    top: 10%; right: 20%; bottom: 15%; left: 15%;
+}
+
+.video-text > h1 {
+    font-size: 10vw;
 }

@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import registerServiceWorker from './components/Forum/registerServiceWorker'
 import { applyMiddleware, createStore } from 'redux'
 import thunk from 'redux-thunk'
 import reducers from './components/Forum/Reducers/index'
@@ -40,5 +39,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-//serviceWorker.unregister();
-registerServiceWorker();
+serviceWorker.unregister();

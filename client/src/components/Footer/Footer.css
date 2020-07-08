@@ -1,10 +1,8 @@
 .footer-container {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    align-content: center;
-    background-color: #777;
+    background-color: lightblue;
     position: absolute;
+    left: 0;
     bottom: 0;
     width: 100%;
+    overflow:hidden;
 }

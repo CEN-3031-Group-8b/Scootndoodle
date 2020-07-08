@@ -1,10 +1,10 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import './MissionStatement.css'
+import mission_data from './mission_data'
 
 export const MissionStatement = () => (
     <Container className='statement-container'>
-        Our purpose is to initiate excitement with tools that allow everyone to 
-        experience the joys of written communications in its many forms.
+        {mission_data[0].componentData}
     </Container>
 )

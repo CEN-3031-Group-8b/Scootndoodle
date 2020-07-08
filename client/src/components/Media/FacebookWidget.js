@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const FacebookWidget = () => (
-    <React.Fragment>
+    <div>
         <div 
             className="fb-page" 
             data-href="https://www.facebook.com/facebook" 
@@ -18,5 +18,5 @@ export const FacebookWidget = () => (
                 className="fb-xfbml-parse-ignore"
             >
             <a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
-    </React.Fragment>
+    </div>
 )

@@ -17,18 +17,22 @@ export const Video = () => (
         <div className='video-text'>
             <Col>
                 <Row className='justify-content-center justify-text-center'>
-                    <h1 className='display-5'>Fun and Engaging Writing Support!</h1>
+                    <h1 style={
+                        {fontSize: '4vw', textAlign: 'center', textShadow: '.5px .5px #D3D3D3'}
+                    }>
+                    Fun and Engaging Writing Support!
+                    </h1>
                 </Row>
                 <Row className='justify-content-center justify-text-center'>
-                    <p>
+                    <p style={
+                        {fontSize: '1.7vw', textAlign: 'center', textShadow: '.5px .5px #D3D3D3'}
+                    }>
                         Used by pre-writers, differently developing doodlers and
                         even adults! The earlier children master written communication
                         skills better than they do academically.
                     </p>
                 </Row>
             </Col>
-            
-            
         </div>
     </div>
 )
